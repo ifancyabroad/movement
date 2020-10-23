@@ -1,0 +1,16 @@
+{
+  "name": "movement",
+  "version": "1.0.0",
+  "description": "The movement website",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Edgar Nightingale",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  }
+}
