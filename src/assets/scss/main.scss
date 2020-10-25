@@ -1,0 +1,22 @@
+.bg-primary-gradient {
+    background-image: linear-gradient(to left, #e9d573, #db9b72 79%, #cd666d 54%, #6c87bf 22%, #7fadb8 0%);
+}
+
+.text-small {
+    font-size: $font-size-sm;
+}
+
+.section-margin {
+    margin-bottom: 100px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.jumbotron {
+    min-height: 100vh;
+}

@@ -41,22 +41,12 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.(css|scss)$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                ],
-            },
-            {
-                test: /\.(scss)$/,
-                use: [{
-                    loader: 'style-loader', // inject CSS to page
-                }, {
-                    loader: MiniCssExtractPlugin.loader
-                }, {
-                    loader: 'css-loader', // translates CSS into CommonJS modules
-                }, {
-                    loader: 'postcss-loader', // Run post css actions
+                {
+                    loader: 'postcss-loader',
                     options: {
                         postcssOptions: {
                             plugins: [
@@ -64,9 +54,9 @@ module.exports = {
                             ]
                         }
                     }
-                }, {
-                    loader: 'sass-loader' // compiles Sass to CSS
-                }]
+                },
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
