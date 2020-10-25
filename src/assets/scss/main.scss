@@ -1,9 +1,13 @@
 .bg-primary-gradient {
-    background-image: linear-gradient(to left, #e9d573, #db9b72 79%, #cd666d 54%, #6c87bf 22%, #7fadb8 0%);
+    background-image: linear-gradient(to left, #e9d573 0%, #db9b72 25%, #cd666d 50%, #6c87bf 75%, #7fadb8 100%);
 }
 
 .text-small {
     font-size: $font-size-sm;
+}
+
+.text-black {
+    color: #000;
 }
 
 .section-margin {
@@ -19,4 +23,24 @@
 
 .jumbotron {
     min-height: 100vh;
+}
+
+.make-a-difference {
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.testimonials {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
