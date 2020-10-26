@@ -1,0 +1,30 @@
+.slick-next-custom,
+.slick-prev-custom {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.slick-prev-custom:hover,
+.slick-prev-custom:focus,
+.slick-next-custom:hover,
+.slick-next-custom:focus {
+    outline: none;
+    background: transparent;
+    color: transparent;
+}
+
+.slick-next-custom {
+    right: 20%;
+}
+
+.slick-prev-custom {
+    left: 20%;
+}
