@@ -27,7 +27,7 @@
     border-top: 37.53px solid #4c505d;
 }
 
-.hexagon-row-adjust {
+.hexagon-row-adjust:not(:first-of-type) {
     margin-top: -40px;
 }
 
@@ -68,7 +68,7 @@
         border-top: 25.98px solid #4c505d;
     }
 
-    .hexagon-row-adjust {
+    .hexagon-row-adjust:not(:first-of-type) {
         margin-top: -28px;
     }
 }
