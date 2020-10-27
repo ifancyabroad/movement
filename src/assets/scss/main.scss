@@ -28,34 +28,6 @@
         position: relative;
         z-index: 1;
     }
-
-    .header-slider {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-
-        .header-slide {
-            position: relative;
-            min-height: 100vh;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .header-slide-1 {
-            background-image: url('/src/assets/images/bg.jpg');
-        }
-
-        .header-slide-2 {
-            background-image: url('/src/assets/images/bg.jpg');
-        }
-
-        .header-slide-3 {
-            background-image: url('/src/assets/images/bg.jpg');
-        }
-    }
 }
 
 .make-a-difference {
@@ -75,5 +47,26 @@
     .subtitle {
         font-size: 12px;
         letter-spacing: 1px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section-margin {
+        margin-bottom: 40px;
+    }
+
+    .make-a-difference {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .testimonials {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .contact {
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }

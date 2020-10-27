@@ -28,3 +28,31 @@
 .slick-prev-custom {
     left: 20%;
 }
+
+.header-slider {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .header-slide {
+        position: relative;
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header-slide-1 {
+        background-image: url('/src/assets/images/bg.jpg');
+    }
+
+    .header-slide-2 {
+        background-image: url('/src/assets/images/bg.jpg');
+    }
+
+    .header-slide-3 {
+        background-image: url('/src/assets/images/bg.jpg');
+    }
+}
