@@ -14,6 +14,10 @@
     color: #000;
 }
 
+.sign-up {
+    width: 304px;
+}
+
 .section-margin {
     margin-bottom: 100px;
 }
@@ -55,6 +59,10 @@
 }
 
 @include media-breakpoint-down(sm) {
+    .sign-up {
+        width: 250px;
+    }
+
     .section-margin {
         margin-bottom: 40px;
     }

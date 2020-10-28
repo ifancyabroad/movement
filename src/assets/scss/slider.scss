@@ -55,4 +55,19 @@
     .header-slide-3 {
         background-image: url('/src/assets/images/bg.jpg');
     }
+
+    .slide-content {
+        min-width: 300px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .slick-next-custom,
+    .slick-prev-custom {
+        display: none!important;
+    }
+
+    .play {
+        width: 66px;
+    }
 }
