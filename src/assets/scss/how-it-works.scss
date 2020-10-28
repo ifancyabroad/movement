@@ -8,6 +8,18 @@
     box-shadow: 0 22px 64px 0 rgba(34, 45, 61, 0.14);
 }
 
+.iphone-small-screenshot,
+.iphone-large-screenshot,
+.iphone-screenshot-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .iphones-display {
     position: relative;
     width: 580px;
@@ -18,17 +30,6 @@
         position: absolute;
         top: 0;
         left: 0;
-    }
-
-    .iphone-small-screenshot,
-    .iphone-large-screenshot {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .iphone-small-wrapper {
@@ -63,4 +64,30 @@
             z-index: 1;
         }
     }
+}
+
+.how-it-works-btn-mobile {
+    position: relative;
+    z-index: 1;
+    margin-top: -32px;
+}
+
+.previous-point,
+.next-point {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.previous-point:active,
+.previous-point:focus,
+.next-point:active,
+.next-point:focus {
+    outline: none;
+}
+
+.iphone-screenshot-mobile {
+    height: 422px;
+    width: 195px;
 }

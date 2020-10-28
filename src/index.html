@@ -112,15 +112,17 @@
     <!--How it works-->
     <section class="section-margin">
         <div class="container">
-            <div class="row justify-content-center mb-4 d-none d-md-flex">
+            <div class="row justify-content-center mb-4 d-none d-lg-flex">
                 <div class="col-5 text-center">
                     <h6 class="text-primary mb-3">What the Movement has to offer</h6>
                     <h2 class="text-black mb-3">How it works</h2>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-md-5">
+
+            <!--Desktop-->
+            <div class="row align-items-center d-none d-lg-flex">
+                <div class="col-5">
                     <div id="point-1" class="how-it-works-btn bg-white rounded d-flex p-4 mb-4">
                         <div class="mr-4">
                             <img src="assets/images/group-3.svg" alt="App icon" width="58">
@@ -149,17 +151,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-7">
                     <div class="iphones-display">
                         <img class="background-shape" src="assets/images/path-2.svg" alt="Background shape">
-                        <div id="iphone-small-wrapper" class="iphone-small-wrapper">
+                        <div class="iphone-small-wrapper">
                             <div id="iphone-small-screenshot" class="iphone-small-screenshot"></div>
                             <img class="iphone-small" src="assets/images/iphone_body.png" alt="Iphone" width="269">
                         </div>
-                        <div id="iphone-large-wrapper" class="iphone-large-wrapper">
+                        <div class="iphone-large-wrapper">
                             <div id="iphone-large-screenshot" class="iphone-large-screenshot"></div>
                             <img class="iphone-large" src="assets/images/iphone_body.png" alt="Iphone" width="333">
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Mobile-->
+            <div class="row d-lg-none">
+                <div class="col">
+                    <div class="position-relative text-center">
+                        <div id="iphone-screenshot-mobile" class="iphone-screenshot-mobile"></div>
+                        <img src="assets/images/iphone_body.png" alt="Iphone" width="224">
+                    </div>
+                    <div class="how-it-works-btn-mobile bg-white rounded border text-center p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <button type="button" class="previous-point">
+                                <img src="assets/images/left-arrow-grey.svg" alt="Previous point">
+                            </button>
+                            <img src="assets/images/group-3.svg" alt="App icon" width="58">
+                            <button type="button" class="next-point">
+                                <img src="assets/images/right-arrow-grey.svg" alt="Next point">
+                            </button>
+                        </div>
+                        <h6 class="font-weight-bold mb-3">Point about app in here</h6>
+                        <p class="text-small text-black-50">Create events and see how they all fit into the bigger picture. Be one step ahead and anticipate the next step.</p>
                     </div>
                 </div>
             </div>
