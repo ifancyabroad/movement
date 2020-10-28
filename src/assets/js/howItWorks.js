@@ -4,6 +4,7 @@ import ScreenshotPlaceholder2 from '../images/screenshot_template2.png';
 import ScreenshotPlaceholder3 from '../images/screenshot_template3.png';
 
 $(function () {
+    // Desktop settings
     let activeScreenshot;
 
     const iphoneSmallImage = document.getElementById('iphone-small-screenshot');
@@ -32,5 +33,45 @@ $(function () {
     pointButton2.addEventListener('click', (e) => setScreenshot(pointButton2, ScreenshotPlaceholder2));
     pointButton3.addEventListener('click', (e) => setScreenshot(pointButton3, ScreenshotPlaceholder3));
 
-    setScreenshot(pointButton1, ScreenshotPlaceholder1)
+    setScreenshot(pointButton1, ScreenshotPlaceholder1);
+
+    // Mobile settings
+    let activeIndex = 0;
+
+    const iphoneMobileImage = document.getElementById('iphone-mobile-screenshot');
+
+    const mobileInforBlocks = document.querySelectorAll('.how-it-works-block');
+    const pointMobile1 = document.getElementById('point-1-mobile');
+    const pointMobile2 = document.getElementById('point-2-mobile');
+    const pointMobile3 = document.getElementById('point-3-mobile');
+
+    const leftButtons = document.querySelectorAll('.previous-point');
+    const rightButtons = document.querySelectorAll('.next-point');
+
+    const appPoints = [
+        { infoElement: pointMobile1, image: ScreenshotPlaceholder1 },
+        { infoElement: pointMobile2, image: ScreenshotPlaceholder2 },
+        { infoElement: pointMobile3, image: ScreenshotPlaceholder3 }
+    ];
+
+    const setActive = () => {
+        mobileInforBlocks.forEach(element => element.classList.remove('active'));
+        appPoints[activeIndex].infoElement.classList.add('active');
+        iphoneMobileImage.style.backgroundImage = `url(${appPoints[activeIndex].image})`;
+    }
+
+    const scroll = (dir) => {
+        activeIndex += dir;
+        if (activeIndex < 0) {
+            activeIndex = appPoints.length - 1;
+        } else if (activeIndex >= appPoints.length) {
+            activeIndex = 0;
+        }
+        setActive();
+    }
+
+    leftButtons.forEach(button => button.addEventListener('click', (e) => scroll(-1)))
+    rightButtons.forEach(button => button.addEventListener('click', (e) => scroll(1)))
+
+    setActive();
 });

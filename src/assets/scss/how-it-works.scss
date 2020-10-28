@@ -66,10 +66,15 @@
     }
 }
 
-.how-it-works-btn-mobile {
+.how-it-works-block {
     position: relative;
     z-index: 1;
     margin-top: -32px;
+    display: none;
+}
+
+.how-it-works-block.active {
+    display: block;
 }
 
 .previous-point,
