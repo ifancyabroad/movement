@@ -32,9 +32,24 @@ $(function () {
         ],
     ];
 
+    const rowsMobile = [
+        [
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' },
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' }
+        ],
+        [
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' },
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' }
+        ],
+        [
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' },
+            { image: LogoPlaceholder, alt: 'Company Logo', text: '999 Miles' }
+        ]
+    ];
+
     const createRow = () => {
         const row = document.createElement('div');
-        row.classList = 'hexagon-row-adjust d-flex justify-content-center';
+        row.classList = 'd-flex justify-content-center';
         return row;
     }
 
@@ -66,12 +81,24 @@ $(function () {
     }
 
     const hexagonPyramid = document.getElementById('hexagon-pyramid');
+    const hexagonPyramidMobile = document.getElementById('hexagon-pyramid-mobile');
+
     rows.forEach(row => {
         const rowElement = createRow();
+        rowElement.classList.add('hexagon-row-adjust');
         hexagonPyramid.appendChild(rowElement);
         row.forEach(hexagon => {
             const hexagonElement = createHexagon(hexagon.image, hexagon.alt, hexagon.text);
             rowElement.appendChild(hexagonElement);
-        })
-    })
+        });
+    });
+
+    rowsMobile.forEach(row => {
+        const rowElement = createRow();
+        hexagonPyramidMobile.appendChild(rowElement);
+        row.forEach(hexagon => {
+            const hexagonElement = createHexagon(hexagon.image, hexagon.alt, hexagon.text);
+            rowElement.appendChild(hexagonElement);
+        });
+    });
 });
